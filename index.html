@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechToons_Verse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #d9cffb, #c3b0f8);
+      color: #2e1f4f;
+      padding: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 30px rgba(108, 90, 255, 0.2);
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 30px rgba(108, 90, 255, 0.3);
+    }
+    .logo img {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+    }
+    .logo-text {
+      color: #ff40bb;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav {
+      position: absolute;
+      left: 20px;
+    }
+    nav a {
+      font-size: 18px;
+      font-weight: bold;
+      color: #5c47e0;
+      background: #fff;
+      padding: 6px 12px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(92, 71, 224, 0.3);
+    }
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #5c47e0;
+    }
+    p {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #3c2d73;
+    }
+    .tech-solutions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: #f3efff;
+      border-radius: 16px;
+      padding: 20px;
+      flex: 1 1 250px;
+      box-shadow: 0 8px 20px rgba(108, 90, 255, 0.2);
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(108, 90, 255, 0.3);
+    }
+    .card h3 {
+      color: #4e3dbb;
+      margin-bottom: 12px;
+    }
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: left;
+    }
+    .card ul li {
+      margin-bottom: 10px;
+    }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social-btn {
+      background: #5c47e0;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(92, 71, 224, 0.4);
+      transition: 0.3s;
+      display: inline-block;
+      text-align: center;
+    }
+    .social-btn:hover {
+      background: #3c20cc;
+    }
+    .telegram { background: #33aaff; }
+    .instagram { background: #c13584; }
+    .whatsapp { background: #25d366; }
+    .youtube { background: #ff0000; }
+    .whatsapp-chat {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+      z-index: 999;
+    }
+    .whatsapp-chat img {
+      width: 28px;
+      height: 28px;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 24px;
+      background: #5c47e0;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(92, 71, 224, 0.4);
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #3c20cc;
+    }
+    @media(max-width: 700px) {
+      .tech-solutions {
+        flex-direction: column;
+        align-items: center;
+      }
+      .container {
+        padding: 30px 20px;
+      }
+      .logo {
+        width: 150px;
+        height: 150px;
+      }
+      .logo img {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav><a href="#home">🏠 Home</a></nav>
+    <div class="logo-container">
+      <div class="logo">
+        <img src="https://placehold.co/180x180/ff40bb/ffffff?text=TT" alt="TechToons_Verse Logo" />
+      </div>
+      <div class="logo-text">TECHTOONS_VERSE</div>
+    </div>
+  </header>
+
+  <div class="container" id="home">
+    <h2>👋 Welcome to TechToons_Verse</h2>
+    <p>🚀 Your go-to hub for AI 🤖, Android 📱, and iOS 🍎 tech solutions.</p>
+  </div>
+
+  <div class="container">
+    <h2>🛠️ Our Tech Solutions</h2>
+    <div class="tech-solutions">
+      <div class="card">
+        <h3>🤖 AI Services</h3>
+        <ul>
+          <li>🔍 Chatbots & NLP</li>
+          <li>🧠 ML Integration</li>
+          <li>⚙️ Automation Tools</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>📱 Android Development</h3>
+        <ul>
+          <li>🎨 UI/UX Design</li>
+          <li>⚡ Fast Apps</li>
+          <li>📤 Play Store Upload</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🍏 iOS Development</h3>
+        <ul>
+          <li>🚀 SwiftUI Apps</li>
+          <li>🔐 Privacy Focused</li>
+          <li>🛒 App Store Ready</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>💸 Pricing</h2>
+    <div class="tech-solutions">
+      <div class="card">
+        <h3>🤖 AI Solutions</h3>
+        <p>₹99 – ₹299</p>
+        <p>Chatbots, AI Tools, NLP</p>
+      </div>
+      <div class="card">
+        <h3>📱 Android Apps</h3>
+        <p>₹20 – ₹60</p>
+        <p>Basic to Medium apps</p>
+      </div>
+      <div class="card">
+        <h3>🍏 iOS Apps</h3>
+        <p>₹60 – ₹150</p>
+        <p>Swift-based apps</p>
+      </div>
+      <div class="card">
+        <h3>🖥️ Screen Share Support</h3>
+        <p><strong>FREE</strong></p>
+        <p>1-on-1 remote assistance</p>
+      </div>
+      <div class="card">
+        <h3>🛠️ Full Tech Package</h3>
+        <p>₹299 – ₹399</p>
+        <p>All services included</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>🖥️ Live Screen Share Support</h2>
+    <p>👨‍💻 Get real-time help — <strong>100% FREE</strong> screen sharing support for all users!</p>
+    <button onclick="alert('🔧 Screen sharing coming soon!')">🔴 Start Screen Share</button>
+  </div>
+
+  <div class="container">
+    <h2>📞 Contact Us</h2>
+    <p>📬 Connect with us on Telegram, Instagram, WhatsApp, YouTube & more!</p>
+    <div class="social-links">
+      <a href="https://t.me/TechninjaOraibot" class="social-btn telegram">🤖 Telegram Bot</a>
+      <a href="https://t.me/TechninjaOrai2" class="social-btn telegram">📢 Telegram Channel</a>
+      <a href="https://instagram.com/yourusername" class="social-btn instagram">📸 Instagram</a>
+      <a href="https://wa.me/917269089318" class="social-btn whatsapp">💬 WhatsApp</a>
+      <a href="https://youtube.com/@legendhacker243?si=j0rTW9sFJmuPng7F" class="social-btn youtube">🎥 YouTube</a>
+    </div>
+  </div>
+
+  <div class="container" id="about">
+    <h2>👨‍💻 About TechToons_Verse</h2>
+    <p>
+      🙋‍♂️ Name: <strong>Abhishek Sharma</strong> <br>
+      📚 Class: 11th <br>
+      💻 Future Cyber Expert & Tech Innovator <br>
+      🚀 Passionate about AI, Mobile Apps & Online Tech Support!
+    </p>
+  </div>
+
+  <a class="whatsapp-chat" href="https://wa.me/917269089318" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat" />
+  </a>
+
+</body>
+</html>
